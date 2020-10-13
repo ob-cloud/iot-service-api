@@ -1,4 +1,5 @@
 import { deleteAction, getAction, postAction, putAction } from "../ajax";
+import { RequestUrlEnum } from "../config/constant";
 
 interface SysMenuParams {
   menuType: number,

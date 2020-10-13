@@ -1,3 +1,4 @@
+export * from './config/constant'
 export * from './ajax'
 export * from './auth'
 export * from './system/menu'

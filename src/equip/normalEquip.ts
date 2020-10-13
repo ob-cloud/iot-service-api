@@ -1,4 +1,5 @@
 import { getAction, postFormAction } from "../ajax";
+import { RequestUrlEnum } from "../config/constant";
 import { BaseAPI } from "./base";
 
 interface NormalEquipParams {
