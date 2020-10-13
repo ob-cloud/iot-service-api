@@ -1,4 +1,5 @@
 import { postAction } from "../ajax";
+import { RequestUrlEnum } from "../config/constant";
 
 /**
  * 权限登录

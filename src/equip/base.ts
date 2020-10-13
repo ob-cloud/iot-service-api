@@ -1,4 +1,5 @@
 import { postFormAction } from "../ajax";
+import { RequestUrlEnum } from "../config/constant";
 
 /**
  * 设置设备节点状态
