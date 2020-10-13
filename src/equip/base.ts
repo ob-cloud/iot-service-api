@@ -1,12 +1,11 @@
-import { postFormAction } from "../common";
-import { COMMON_URL } from "../config/constant";
+import { postFormAction } from "../ajax";
 
 /**
  * 设置设备节点状态
  * @param serialId 设备序列号
  * @param status 设备状态
  */
-export const settingNodeStatus = (serialId: string, status: string):Promise<any> => postFormAction(COMMON_URL, {
+export const settingNodeStatus = (serialId: string, status: string):Promise<any> => postFormAction(RequestUrlEnum.COMMON_URL, {
   CMD: 'setting_node_status',
   serialId,
   status
@@ -16,7 +15,7 @@ export const settingNodeStatus = (serialId: string, status: string):Promise<any>
  * 获取节点状态
  * @param serialId 序列号
  */
-export const getNodeStatus = (serialId: string):Promise<any> => postFormAction(COMMON_URL, {
+export const getNodeStatus = (serialId: string):Promise<any> => postFormAction(RequestUrlEnum.COMMON_URL, {
   CMD: 'query_node_real_status',
   serialId
 })

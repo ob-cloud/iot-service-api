@@ -1,5 +1,4 @@
-import { getAction, postFormAction } from "../common";
-import { COMMON_URL } from "../config/constant";
+import { getAction, postFormAction } from "../ajax";
 import { BaseAPI } from "./base";
 
 interface NormalEquipParams {
@@ -24,7 +23,7 @@ class NormalEquip extends BaseAPI {
    * @param params 参数
    */
   static getNormalEquipListByPage (params: NormalEquipParams = {}):Promise<any> {
-    return getAction(COMMON_URL, {
+    return getAction(RequestUrlEnum.COMMON_URL, {
       CMD: 'query_device',
       ...params
     })
@@ -34,7 +33,7 @@ class NormalEquip extends BaseAPI {
    * @param param0 参数
    */
   static delNormalEquip ({ serialId, name }: NormalEquipParams):Promise<any> {
-    return postFormAction(COMMON_URL, {
+    return postFormAction(RequestUrlEnum.COMMON_URL, {
       CMD: 'modify_device',
       operate_type: '00',
       serialId,
@@ -47,7 +46,7 @@ class NormalEquip extends BaseAPI {
    * @param param0 参数
    */
   static eidtNormalEquip ({ serialId, name }: NormalEquipParams):Promise<any> {
-    return getAction(COMMON_URL, {
+    return getAction(RequestUrlEnum.COMMON_URL, {
       CMD: 'modify_device',
       operate_type: '01',
       serialId,
