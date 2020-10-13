@@ -1,11 +1,12 @@
 import test from 'ava';
 
 import {
+  Fetch,
   NormalEquip
 } from '../index';
 
 
 test('Converter.toBinary', t => {
-  console.log('------------- ', NormalEquip)
+  console.log('------------- ', Fetch, NormalEquip)
   t.true(true);
 });

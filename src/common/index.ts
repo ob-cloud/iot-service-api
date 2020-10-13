@@ -1,7 +1,7 @@
 import { getAction, postAction, postFormAction, putAction, deleteAction, deleteJsonAction, httpAction, downloadAction, downloadActionByWin, getRequestUrl } from './action'
 import { axios } from './request'
 
-export {
+const Fetch = {
   axios,
   getAction,
   postAction,
@@ -13,4 +13,19 @@ export {
   downloadAction,
   downloadActionByWin,
   getRequestUrl
+}
+
+export {
+  axios,
+  getAction,
+  postAction,
+  postFormAction,
+  putAction,
+  deleteAction,
+  deleteJsonAction,
+  httpAction,
+  downloadAction,
+  downloadActionByWin,
+  getRequestUrl,
+  Fetch
 }
